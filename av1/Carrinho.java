@@ -1,12 +1,11 @@
-package av1.produto;
+package av1;
 
 import java.util.ArrayList;
 
 public class Carrinho {
     private int idPessoa;
     private ArrayList<Item> itens = new ArrayList();
-    private float valor;
-
+    private double total;
 
     public Carrinho(int idPessoa) {
         super();
@@ -17,26 +16,42 @@ public class Carrinho {
         return idPessoa;
     }
 
-    public void setId(int idPessoa) {
+    public void setIdPessoa(int idPessoa) {
         this.idPessoa = idPessoa;
     }
 
+    public double getTotal(){
+        return total;
+    }
+
+    public void setTotal(double total){
+        this.total = total;
+    }
+
     public void setItem(int idProduto, int quant){
+       
         int id = idProduto;
         int quantidade = quant;
         Item item = new Item(id, quantidade);
         itens.add(item);
     }
 
-    public int getItem(int num){
+    public int getItemId(int num){
         int resp = itens.get(num).getIdProduto();
         return resp;
     }
 
-    public void Valor(float valor){
-
-        for (int i = 0; i < itens.size(); i++){
-        
-        }
+    public int getItemQuant(int num){
+        int resp = itens.get(num).getQuant();
+        return resp;
     }
+
+    public void setItemQuant(int num,int quant){
+       itens.get(num).setQuant(quant);
+    }
+
+    public int getItemsize(){
+        return itens.size();
+    }
+
 }

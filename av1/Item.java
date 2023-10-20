@@ -1,4 +1,4 @@
-package av1.produto;
+package av1;
 
 public class Item {
     private int idProduto;

@@ -1,4 +1,4 @@
-package av1.produto;
+package av1;
 
 
 public class Produto {
